@@ -4,12 +4,20 @@ import axios from 'axios';
 import { getBanner } from '../service/banner.service';
 export default function TopCoupons() {
 
-   
+  
     
   const [couponList, setCouponList] = useState([])
 
     useEffect(()=>{
-      setCouponList(getBanner())
+        axios.get('http://localhost:3000/couponList')
+        .then((res)=>{
+          const data = res.data
+          setCouponList(data)
+        })
+        .catch((error)=>{
+          console.log('error : ' + error)
+        })
+        console.log(couponList)
       },[])
 
 

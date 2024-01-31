@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaSearchDollar } from "react-icons/fa";
-import Hamburger from '../../icons/Hamburger';
+// import Hamburger from '../../icons/Hamburger';
 export default function Navbar() {
 
     const links =[
